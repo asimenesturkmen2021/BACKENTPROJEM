@@ -19,7 +19,7 @@ public class RunnerFetch02 {
 
        Student02 student = session.get(Student02.class, 1001);
         System.out.println(student);
-        System.out.println(student.getAddress());
+        System.out.println(student.getAddress()); // adress bilgisi ekrana basiliyor
 
        tx.commit();
        session.close();
