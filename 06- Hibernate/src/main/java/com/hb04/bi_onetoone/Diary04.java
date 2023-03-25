@@ -50,7 +50,7 @@ public class Diary04 {
         return "Diary04{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", student=" + student +
+               /* ", student=" + student +*/
                 '}';
     }
 }
