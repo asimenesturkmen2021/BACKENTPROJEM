@@ -5,6 +5,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import java.io.Serializable;
+
 public class RunnerSave09 {
     public static void main(String[] args) {
 
@@ -74,9 +76,8 @@ public class RunnerSave09 {
         session.save(student3);
 
 
-
-
         tx.commit();
+
         session.close();
         sf.close();
 
