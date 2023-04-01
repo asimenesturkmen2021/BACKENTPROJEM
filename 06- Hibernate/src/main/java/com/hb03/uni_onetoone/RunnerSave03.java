@@ -34,6 +34,12 @@ public class RunnerSave03 {
         diary2.setName("Akin beyin gunlugu");
         diary2.setStudent(student2);
 
+        Diary diary3 = new Diary();
+        diary3.setId(103);
+        diary3.setName("Sahipsiz Gunluk");
+
+
+
         Configuration con = new Configuration().configure("hibernate.cfg.xml").
                 addAnnotatedClass(Student03.class).addAnnotatedClass(Diary.class);
 
@@ -41,12 +47,13 @@ public class RunnerSave03 {
         Session session = sf.openSession();
         Transaction tx = session.beginTransaction();
 
+        session.save(diary1);
+        session.save(diary2);
+        session.save(diary3);
+
         session.save(student1);
         session.save(student2);
         session.save(student3);
-
-        session.save(diary1);
-        session.save(diary2);
 
 
         tx.commit();
