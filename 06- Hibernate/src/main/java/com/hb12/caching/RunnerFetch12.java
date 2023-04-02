@@ -19,7 +19,8 @@ public class RunnerFetch12 {
         System.out.println("ilk get islemi 1 id li ogrenci icin : ");
         Student12 student1 = session.get(Student12.class,1L);
 
-//        session.clear();
+//        session.clear(); // 1.level cache etkinken bu satirla cache temizlenmis
+                    // oluyor ve alttaki 2 satiri calistirdigimizda yeni query olusmak zorunda kaliyor
 //
 //
 //        System.out.println("ikinci get islemi 1 id li ogrenci icin : ");
