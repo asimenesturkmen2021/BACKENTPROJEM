@@ -14,8 +14,8 @@ public class Diary04 {
     private String name;
 
     @OneToOne
-    @JoinColumn(name ="std_id")
-    private Student04 student;
+    @JoinColumn(name ="std_id" )
+    private Student04 student;  // 1001  1002
 
     // !!! Getter- Setter
 
