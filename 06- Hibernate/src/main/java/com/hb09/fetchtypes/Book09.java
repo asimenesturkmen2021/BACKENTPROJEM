@@ -1,23 +1,23 @@
-package com.hb04.bi_onetoone;
+package com.hb09.fetchtypes;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class Diary04 {
+public class Book09 {
 
     @Id
     private int id;
 
     private String name;
 
-    @OneToOne
-    @JoinColumn(name ="std_id" )
-    private Student04 student;  // 1001  1002
+    @ManyToOne // EAGER
+    @JoinColumn
+    private Student09 student;
 
-    // !!! Getter- Setter
+    // !!! Getter-Setter
 
     public int getId() {
         return id;
@@ -35,22 +35,21 @@ public class Diary04 {
         this.name = name;
     }
 
-    public Student04 getStudent() {
+    public Student09 getStudent() {
         return student;
     }
 
-    public void setStudent(Student04 student) {
+    public void setStudent(Student09 student) {
         this.student = student;
     }
 
-    // !!! toString()
+    //!!! toString()
 
     @Override
     public String toString() {
-        return "Diary04{" +
+        return "Book09{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-               /* ", student=" + student +*/
                 '}';
     }
 }
