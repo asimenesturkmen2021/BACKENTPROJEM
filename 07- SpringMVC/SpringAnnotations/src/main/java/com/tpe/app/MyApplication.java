@@ -7,6 +7,8 @@ import com.tpe.service.MessageService;
 import com.tpe.service.SmsService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Random;
+
 public class MyApplication {
     public static void main(String[] args) {
 
@@ -17,6 +19,7 @@ public class MyApplication {
         AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext(AppConfiguration.class);
         //config classındaki component scan ile tüm componentleri tarayacak
         //her component tan bir tane bean oluştur, contexte hazırda bekletecek
+        //bean istediğimizde içerisindeki gerekli bağımlılıkları enjekte ederek verir
 
 
        // MessageService service=context.getBean(MailService.class);
@@ -25,13 +28,38 @@ public class MyApplication {
                                      //spring container dan rica ettik, bize hazır getirdi. IoC
 
        // MessageService service=context.getBean(SmsService.class);
-        MessageService service=context.getBean("smsservice",MessageService.class);
-        service.sendMessage(message);
+//        MessageService service=context.getBean("smsservice",MessageService.class);
+//        service.sendMessage(message);
 
         //interface i implemente eden  birden fazla component ile işaretlenmiş class varsa
         //hangisini alması gerektiğini belirtmemiz gerekir.
 
-        context.close();//contextten obje isteyemeyiz.
+//        MessageService service=context.getBean(MailService.class);//mailservice newlenmeden geldi.
+//        service.sendMessage(message);
+//        service.saveMessage(message);//dbrepoyu da newlemedik.
+//        //enjekte edilecek obje seçeneği birden fazla qualifier ile belirtilmeli
+//
+//        //Random random=new Random();-->Spring bizim için oluştursun.
+//        Random random=context.getBean(Random.class);
+//        System.out.println(random.nextInt(100));
+
+        MessageService service1=context.getBean(MailService.class);
+        MessageService service2=context.getBean(MailService.class);
+
+        //spring te beanlerin default scope:singleton
+        //singleton:tüm uygulama için sadece tek bir bean oluşturulur.
+        //prototype:her obje istendiğinde yeni bir bean oluşturulur.
+
+        if(service1==service2){
+            System.out.println("Aynı referanslı objeler");
+            System.out.println(service1);
+            System.out.println(service2);
+        }else{
+            System.out.println("Farklı referanslı objeler");
+            System.out.println(service1);
+            System.out.println(service2);
+        }
+        context.close();//contextten obje isteyemeyiz,beanler sonlandırılır, getBean ile bean talep edemeyiz.
 
 
     }
