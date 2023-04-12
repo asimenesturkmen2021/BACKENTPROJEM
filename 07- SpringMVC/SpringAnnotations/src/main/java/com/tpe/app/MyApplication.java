@@ -47,8 +47,8 @@ public class MyApplication {
         MessageService service2=context.getBean(MailService.class);
 
         //spring te beanlerin default scope:singleton
-        //singleton:tüm uygulama için sadece tek bir bean oluşturulur.
-        //prototype:her obje istendiğinde yeni bir bean oluşturulur.
+        //singleton:tüm uygulama için sadece tek bir bean oluşturulur, beanin tüm life cycleından Spring sorumludur.
+        //prototype:her obje istendiğinde yeni bir bean oluşturulur, beanin destroy/sonlandırılmasından sorumlu değildir.
 
         if(service1==service2){
             System.out.println("Aynı referanslı objeler");
@@ -59,7 +59,25 @@ public class MyApplication {
             System.out.println(service1);
             System.out.println(service2);
         }
+
+        SmsService service3=context.getBean(SmsService.class);
+        service3.sendMessage(message);
+        service3.printContact();//value ile uyg dışından değerleri aldık
+        service3.printProperties();
+
+
+
+        //tüm uygulamadaki beanlerin isimleri
+//        String[] beanNames=context.getBeanDefinitionNames();
+//        for (String name:beanNames) {
+//            System.out.println(name);
+//        }
+
+
+
         context.close();//contextten obje isteyemeyiz,beanler sonlandırılır, getBean ile bean talep edemeyiz.
+
+        System.out.println("context in close metodun sonra");
 
 
     }
