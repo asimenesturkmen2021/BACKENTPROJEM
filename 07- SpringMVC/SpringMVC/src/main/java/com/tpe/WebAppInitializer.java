@@ -12,12 +12,14 @@ Dispatcher: Servlet WebAppContext->Controller,Handler Mapping,View Resolver
             Root WebAppContext->services,repositories
 */
 
-    @Override//db'ye erişim için gerekli config class
+    @Override//db'ye erişim(hibernate/jdbc) için gerekli config class
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        return new Class[]{
+          RootContextConfig.class
+        };
     }
 
-    @Override//Controller,Handler Mapping,View Resolver ile ilgili config
+    @Override//Controller,Handler Mapping,View Resolver(SpringMVC) ile ilgili config
     protected Class<?>[] getServletConfigClasses() {
         return new Class[]{
           WebMvcConfig.class
