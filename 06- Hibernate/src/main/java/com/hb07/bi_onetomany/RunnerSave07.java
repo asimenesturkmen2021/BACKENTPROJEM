@@ -52,6 +52,13 @@ public class RunnerSave07 {
         book4.setStudent(student2);
         book5.setStudent(student2);
 
+        student1.getBookList().add(book1);
+        student1.getBookList().add(book2);
+
+        student2.getBookList().add(book3);
+        student2.getBookList().add(book4);
+        student2.getBookList().add(book5);
+
         Configuration con = new Configuration().configure("hibernate.cfg.xml").
                 addAnnotatedClass(Student07.class).addAnnotatedClass(Book07.class);
 
@@ -63,11 +70,12 @@ public class RunnerSave07 {
         session.save(student2);
         session.save(student3);
 
-        session.save(book1);
-        session.save(book2);
-        session.save(book3);
-        session.save(book4);
-        session.save(book5);
+
+//        session.save(book1);
+//        session.save(book2);
+//        session.save(book3);
+//        session.save(book4);
+//        session.save(book5);
 
 
 

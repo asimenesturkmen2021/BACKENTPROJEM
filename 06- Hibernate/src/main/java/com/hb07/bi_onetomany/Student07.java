@@ -1,8 +1,12 @@
 package com.hb07.bi_onetomany;
 
-import javax.persistence.*;
+
 import java.util.ArrayList;
 import java.util.List;
+
+
+import javax.persistence.*;
+
 
 @Entity
 public class Student07 {
@@ -15,7 +19,7 @@ public class Student07 {
 
     private int grade;
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.REMOVE, orphanRemoval = true)
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Book07> bookList = new ArrayList<>();
 
     // !!! Getter-Setter

@@ -17,8 +17,8 @@
         <ehcache.version>3.6.3</ehcache.version>
     </properties>
 
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+    <dependencies><!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
