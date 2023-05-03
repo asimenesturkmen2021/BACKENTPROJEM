@@ -30,8 +30,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 authorizeHttpRequests().  // gelen butun rwquestleri yetkilimi diye kontrol edecegiz
                 antMatchers("/",
                         "index.html",
+                        "/register",
                         "/css/*",
                         "/js/*").permitAll(). // bu end-pointleri yetkili mi diye kontrol etme
+               // and().
+               // authorizeRequests().antMatchers("/students/**").hasRole("ADMIN"). // end-point seviyesinde yetkilendirme yapmak icin bu satiri ekledik
                 anyRequest(). // muaf tutulan end-pointler disinda gelen herhangi bir requesti
                 authenticated(). // yetkili mi diye kontrol et
                 and().
