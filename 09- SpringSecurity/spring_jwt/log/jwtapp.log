@@ -1,0 +1,27 @@
+2023-05-04 23:44:05,847 INFO  [restartedMain] com.tpe.SpringJwtApplication:Starting SpringJwtApplication using Java 11.0.18 on yupe with PID 97405 (/mnt/depo/Coding Projects/intelliJ_Workspace/Batch130-131/09- SpringSecurity/spring_jwt/target/classes started by yupe in /mnt/depo/Coding Projects/intelliJ_Workspace/Batch130-131/09- SpringSecurity/spring_jwt)
+2023-05-04 23:44:05,852 INFO  [restartedMain] com.tpe.SpringJwtApplication:No active profile set, falling back to 1 default profile: "default"
+2023-05-04 23:44:06,064 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-04 23:44:06,068 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-04 23:44:07,766 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-04 23:44:07,892 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 106 ms. Found 2 JPA repository interfaces.
+2023-05-04 23:44:09,561 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
+2023-05-04 23:44:09,577 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-05-04 23:44:09,577 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.58]
+2023-05-04 23:44:09,697 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-05-04 23:44:09,698 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 3628 ms
+2023-05-04 23:44:10,084 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-04 23:44:10,228 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.5.Final
+2023-05-04 23:44:10,508 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-04 23:44:10,675 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2023-05-04 23:44:11,213 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2023-05-04 23:44:11,239 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-04 23:44:12,341 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-04 23:44:12,351 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-04 23:44:13,018 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-04 23:44:13,443 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will not secure any request
+2023-05-04 23:44:14,142 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-05-04 23:44:14,219 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-04 23:44:14,236 INFO  [restartedMain] com.tpe.SpringJwtApplication:Started SpringJwtApplication in 9.743 seconds (JVM running for 12.709)
+2023-05-04 23:44:20,591 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-04 23:44:20,597 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+2023-05-04 23:44:20,628 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
