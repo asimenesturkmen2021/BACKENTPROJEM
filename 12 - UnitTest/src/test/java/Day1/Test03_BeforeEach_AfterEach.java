@@ -22,6 +22,13 @@ public class Test03_BeforeEach_AfterEach {
 
     }
 
+    @AfterEach
+    void afterEach(){
+        str = null;
+        System.out.println("********** AfterEach() calisti **************");
+    }
+
+
 
 
     @Test
@@ -44,12 +51,7 @@ public class Test03_BeforeEach_AfterEach {
         assertEquals(beklenenDeger,anlikDeger);
     }
 
-    @AfterEach
-    void afterEach(){
-        str = null;
-        System.out.println("********** AfterEach() calisti **************");
-    }
 
-    // test methodlarinin calisma sirasini kendimiz belirlemek istiyorsak JUnit4 --> @FixMethodOrder
-            // JUnit5 -->@TestMethodOrder
+    // !!! test methodlarinin calisma sirasini kendimiz belirlemek istiyorsak JUnit4 --> @FixMethodOrder
+            // JUnit5 --> @TestMethodOrder
 }
