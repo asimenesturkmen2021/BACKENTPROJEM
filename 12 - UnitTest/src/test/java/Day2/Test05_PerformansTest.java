@@ -12,12 +12,14 @@ public class Test05_PerformansTest {
     // !!! Bunu nerede kullanabiliriz ??? Task olarak verilen sorunun cozumu icin
         // yazilan kodun maksimum 2 saniye icinde ekrana sonucu vermesini sitiyorsam :
 
-    @Test
-    void testPrintPerformans(){
 
-        assertTimeout(Duration.ofSeconds(2),
-                () -> IntStream.rangeClosed(1,100000)).forEach(System.out::println);
+    @Test
+    void testPrintPerformans() {
+        assertTimeout(Duration.ofSeconds(2), () -> {
+            IntStream.rangeClosed(1, 400000).forEach(System.out::println);
+        });
     }
+
 
     @Test
     void testPerformans(){
