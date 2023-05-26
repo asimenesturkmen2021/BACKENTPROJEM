@@ -18,7 +18,16 @@ public class ContactMessageController {
     private final ContactMessageService contactMessageService;
 
     // Not: save() **********************************************
-    @PostMapping("/save")
+
+    /*
+        {
+            "name" : "Mirac",
+            "email" : "xxx@yyy.com",
+            "subject" : "RestFull API",
+            "message" : "RestFull API"
+        }
+     */ // Ornek JSON
+    @PostMapping("/save") // http://localhost:8080/contactMessages/save
     public ResponseMessage<ContactMessageResponse> save(@Valid @RequestBody ContactMessageRequest contactMessageRequest) {
 
         return contactMessageService.save(contactMessageRequest);
@@ -28,7 +37,7 @@ public class ContactMessageController {
 
 
     // Not: getAll() ********************************************
-    @GetMapping("/getAll")
+    @GetMapping("/getAll")  // http://localhost:8080/contactMessages/getAll
     public Page<ContactMessageResponse> getAll(
             @RequestParam(value = "page", defaultValue = "0") int page,
             @RequestParam(value = "size", defaultValue = "10") int size,
@@ -41,7 +50,7 @@ public class ContactMessageController {
 
 
     // Not: searchByEmail() *************************************
-    @GetMapping("/searchByEmail")
+    @GetMapping("/searchByEmail") // http://localhost:8080/contactMessages/searchByEmail?email=xxx@yyy.com&page=0&size=1&sort=date&type=desc
     public Page<ContactMessageResponse> searchByEmail(
             @RequestParam(value = "email") String email,
             @RequestParam(value = "page", defaultValue = "0") int page,
@@ -54,7 +63,7 @@ public class ContactMessageController {
 
 
     // Not: searchBySubject()************************************
-    @GetMapping("/searchBySubject")
+    @GetMapping("/searchBySubject") // http://localhost:8080/contactMessages/searchBySubject?subject=RestFull API&page=0&size=1&sort=date&type=desc
     public Page<ContactMessageResponse> searchBySubject(
             @RequestParam(value = "subject") String subject,
             @RequestParam(value = "page", defaultValue = "0") int page,
