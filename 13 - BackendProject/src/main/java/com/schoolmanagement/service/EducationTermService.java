@@ -185,7 +185,7 @@ public class EducationTermService {
             throw new ResourceNotFoundException(String.format(Messages.EDUCATION_TERM_NOT_FOUND_MESSAGE, id));
         }
     }
-    //!!! ODEV-2 : save ve update methodalrindaki tarih kontrolleri ayri bir method uzerinden cagrilmali
+    //!!! ODEV-2 : save methodundaki tarih kontrolleri ayri bir method uzerinden cagrilmali
     private void checkEducationTermDate(EducationTermRequest request){
         //!!! son kayit tarihi , ders doneminin baslangic tarihinden sonra olmamali :
 
