@@ -177,6 +177,14 @@ public class EducationTermService {
                 .build();
     }
 
+    // Not :  getById() ********************************************************************
+    public EducationTerm getById(Long educationTermId) {
+
+        checkEducationTermExists(educationTermId);
+
+        return educationTermRepository.findByIdEquals(educationTermId);
+    }
+
     //Not:  ---> EDUCATION-TERM-SERVICE <---
 
     //!!! ODEV-1 : ya yoksa kontrolleri method uzerinden cagrilmali
@@ -203,5 +211,6 @@ public class EducationTermService {
             throw  new ResourceNotFoundException(Messages.EDUCATION_TERM_IS_ALREADY_EXIST_BY_TERM_AND_YEAR_MESSAGE);
         }
     }
+
 
 }
