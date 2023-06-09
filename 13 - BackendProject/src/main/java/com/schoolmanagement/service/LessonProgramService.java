@@ -32,7 +32,7 @@ public class LessonProgramService {
     private final LessonProgramRepository lessonProgramRepository;
     private final LessonService lessonService;
     private final LessonProgramDto lessonProgramDto;
-    private EducationTermService educationTermService;
+    private final EducationTermService educationTermService;
 
 
     // Not :  Save() *************************************************************************
