@@ -102,6 +102,15 @@ public class AdvisorTeacherService {
             advisorTeacherRepository.save(advisorTeacherBuilder.build()); // TODO buraya bakilacak
         }
 
+/*        if (advisorTeacher.isPresent()) {
+            if (status) {
+                advisorTeacherBuilder.id(advisorTeacher.get().getId());
+                advisorTeacherRepository.save(advisorTeacherBuilder.build());
+            } else {
+                advisorTeacherRepository.deleteById(advisorTeacher.get().getId());
+            }
+        }*/
+
     }
 
     // Not: StudentService icin gerekli metod ***************************
