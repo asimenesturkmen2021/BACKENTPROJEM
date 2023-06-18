@@ -5,4 +5,5 @@ if (meet.getDate().equals(date) && ((startTime.isAfter(existingStartTime) && sta
         (startTime.isBefore(existingStartTime) && stopTime.isAfter(existingStopTime)) || //yenisi eskisini kapsiyor mu
         (startTime.equals(existingStartTime) && stopTime.equals(existingStopTime)))) { //eskisi ve yenisi ayni zaman diliminde mi
     throw new ConflictException(Messages.MEET_EXIST_MESSAGE);
+    https://github.com/techproeducation-batchs/B130-131-JAVA-DEV-TR.git/
 }
