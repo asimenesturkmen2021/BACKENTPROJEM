@@ -1,0 +1,8 @@
+toplanti tarihleri birbirleriyle cakisiyor mu?
+
+if (meet.getDate().equals(date) && ((startTime.isAfter(existingStartTime) && startTime.isBefore(existingStopTime)) || //yenisi eskisinin icinde mi
+        (stopTime.isAfter(existingStartTime) && stopTime.isBefore(existingStopTime)) || //yenisinin stopu eskisinin (bas-bitis) arasinda mi
+        (startTime.isBefore(existingStartTime) && stopTime.isAfter(existingStopTime)) || //yenisi eskisini kapsiyor mu
+        (startTime.equals(existingStartTime) && stopTime.equals(existingStopTime)))) { //eskisi ve yenisi ayni zaman diliminde mi
+    throw new ConflictException(Messages.MEET_EXIST_MESSAGE);
+}
